@@ -1,0 +1,398 @@
+/* 🌐 RESET E VARIÁVEIS */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+:root {
+  --Cor-Primaria: #820D0D;
+  --Cor-Secundaria: #1C3D30;
+  --Cor-Terciaria: #009F35;
+
+  --Branco: #fff;
+  --Preto: #000;
+  --Cinza-Escuro: #333333;
+  --Cinza-Claro: #767676;
+  --Cor-Select: #f0f0f0;
+}
+
+
+/* 🔼 HEADER PRINCIPAL */
+
+.main-header {
+  background-color: var(--Cor-Secundaria);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 4vw;
+  gap: 1.5rem;
+  position: relative; 
+  z-index: 0;
+}
+
+
+/* 🔗 LOGO */
+
+.logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 2.5rem;
+}
+
+
+/* 📌 MENU DE NAVEGAÇÃO */
+
+.center-content {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+  gap: clamp(2rem, 10vw, 10rem);
+  margin: 0 2vw;
+  flex-wrap: nowrap;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-menu a {
+  color: var(--Branco);
+  text-decoration: none;
+  font-size: 0.9375rem;
+}
+
+.nav-menu a:hover {
+  color: var(--Cinza-Claro);
+  transition: 300ms;
+}
+
+
+/* 🔍 BARRA DE BUSCA (Desktop) */
+
+.search-wrapper {
+  flex-shrink: 0;
+}
+
+.search-container {
+  position: relative;
+  width: clamp(12rem, 20vw, 22rem);
+  display: flex;
+  align-items: center;
+  z-index: 1002;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 0.625rem 2.5rem 0.625rem 1.25rem;
+  border: none;
+  border-radius: 999px;
+  font-size: 0.875rem;
+}
+
+.search-container button {
+  position: absolute;
+  right: 0.625rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Remove o X (botão de limpar) dos inputs type=search no Chrome, Edge, Safari */
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+
+/* Resultados de Autocomplete (Desktop) */
+
+#resultsList {
+  position: absolute;
+  top: 105%;
+  padding: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--Branco);
+  list-style: none;
+  max-height: 15.625rem;
+  overflow-y: auto;
+  border: 1px solid var(--Cinza-Claro);
+  border-top: none;
+  border-radius: 0 0 0.625rem 0.625rem;
+  z-index: 1003;
+  display: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+#resultsList li {
+  padding: 0.625rem 1rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+#resultsList li:hover {
+  background-color: var(--Cor-Select);
+}
+
+
+/* 👤 ÍCONES TOPO */
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  flex-shrink: 0;
+}
+
+.icon-circle {
+  background-color: var(--Branco);
+  border-radius: 50%;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+  color: var(--Preto);
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.icon-circle img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.icon-circle:hover {
+  background-color: var(--Cor-Select);
+}
+
+
+/* ☰ BOTÃO HAMBÚRGUER */
+
+.hamburger {
+  background: none;
+  border: none;
+  color: var(--Branco);
+  font-size: 1.625rem;
+  cursor: pointer;
+  display: none;
+}
+
+
+/* 📱 ÍCONES MOBILE */
+
+.mobile-icons {
+  display: none;
+}
+
+.mobile-only {
+  display: none;
+}
+
+
+/* 📋 SIDEBAR MOBILE */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 17.5rem;
+  height: 100%;
+  background-color: var(--Cor-Select);
+  padding: 2rem 1.25rem;
+  transition: left 0.3s ease;
+  z-index: 1100;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--Preto);
+  cursor: pointer;
+  z-index: 1110;
+}
+
+.user-info {
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.user-info p {
+  font-weight: bold;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.9375rem 0;
+  border-top: 1px solid var(--Cinza-Claro);
+  font-size: 0.9375rem;
+}
+
+.sidebar-menu li img {
+  width: 2rem;
+  height: 2rem;
+}
+
+
+/* 📱 BREAKPOINT MOBILE */
+
+@media (max-width: 54.94rem) {
+  .desktop-only {
+    display: none;
+  }
+
+  .main-header {
+    position: relative;
+    height: 4rem;
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 2;
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    z-index: 1;
+  }
+
+  .center-content {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block !important;
+  }
+
+
+  /* 🔍 Busca Mobile */
+
+  .mobile-search {
+    display: flex !important;
+    width: 100%;
+    padding: 0 4vw 0.75rem 4vw;
+    background-color: var(--Cor-Secundaria);
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+  }
+
+  .mobile-search .search-container {
+    width: 100% !important;
+  }
+
+  .mobile-search input {
+    width: 100%;
+    padding: 0.625rem 2.5rem 0.625rem 1.25rem;
+    border: 1px solid var(--Cinza-Claro);
+    border-radius: 999px;
+    font-size: 0.875rem;
+  }
+
+  .mobile-search button {
+    position: absolute;
+    right: 5vw;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .mobile-search img {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  #resultsListMobile {
+    position: absolute;
+    top: 100%;
+    left: 4vw;
+    right: 4vw;
+    background-color: var(--Branco);
+    list-style: none;
+    border: 1px solid var(--Cinza-Claro);
+    border-top: none;
+    border-radius: 0 0 0.625rem 0.625rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    max-height: 15rem;
+    overflow-y: auto;
+    z-index: 1003;
+    display: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #resultsListMobile li {
+    padding: 0.625rem 1rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+  }
+
+  #resultsListMobile li:hover {
+    background-color: var(--Cor-Select);
+  }
+
+
+  /* Ícones Mobile */
+
+  .mobile-icons {
+    display: block;
+    position: absolute;
+    right: 4vw;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  .mobile-icons .icon-circle {
+    width: 2.25rem;
+    height: 2.25rem;
+    background-color: var(--Branco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+
+  .mobile-icons img {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}

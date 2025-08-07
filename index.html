@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="shortcut icon" href="./IMG/Logotipo.png" type="image/x-icon">
+  <link rel="stylesheet" href="./CSS/style.css" />
+</head>
+<body>
+<!-- HEADER HEADER HEADER HEADER HEADER HEADER -->
+
+  <header class="header">
+    <img src="./IMG/Logotipo.png" alt="Logo" class="logo" />
+  </header>
+
+<!-- HEADER HEADER HEADER HEADER HEADER HEADER -->
+
+<!-- MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN -->
+  <div class="desktop-container">
+  <main class="login-container">
+    <div class="login-header">Acessar conta</div>
+    <section class="login-box">
+      <form class="login-form">
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="Digite o seu Email" required />
+
+        <label for="senha">Senha</label>
+        <div class="password-wrapper">
+          <input type="password" id="senha" placeholder="Sua Senha" required />
+          <span class="toggle-password" onclick="toggleSenha()">👁️</span>
+        </div>
+
+        <a href="#" class="forgot-password">Esqueci Senha</a>
+
+        <button type="submit" class="btn-login">Entrar</button>
+      </form>
+    </section>
+
+    <a href="../Cadastro De Usuário/cadastro-user.html" class="btn-register btn-mobile">Criar minha conta</a>
+  </main>
+
+<!-- MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN -->
+
+  <!-- Desktop -->
+  <aside>
+    <h2>Crie uma conta fácil e rápido!</h2>
+    <p>Com a sua conta da Suitm Style você tem acesso a Ofertas exclusivas, descontos, pode criar e gerenciar a sua conta Suitm Style, acompanhar os seus pedidos e muito mais!</p>
+    <a href="../Cadastro De Usuário/cadastro-user.html" class="btn-register btn-desktop">Criar minha conta</a>
+    <img src="IMG/image.png" alt="Imagem" class="Imagem">
+  </aside>
+  </div> 
+
+  <script src="./JS/script.js" defer></script>
+</body>
+</html>

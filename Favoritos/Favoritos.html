@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Favoritos</title>
+  <link rel="stylesheet" href="Favoritos.css">
+  <link rel="shortcut icon" href="./IMG/Logotipo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- HEADER HEADER HEADER HEADER HEADER HEADER -->
+
+<header class="main-header">
+  <button class="hamburger" id="hamburgerBtn">☰</button>
+
+  <div class="logo">
+    <img src="./IMG/Logotipo.png" alt="Logo" />
+  </div>
+
+  <div class="mobile-icons">
+  <a href="../Carrinho/TCC- Carrinho/Carrinho.html" class="icon-circle"><img src="./IMG/Icon-Carrinho.png" alt="Carrinho"></a>
+  </div>
+
+  <div class="center-content desktop-only">
+    <nav class="nav-menu">
+      <a href="../Home/Home.html">Home</a>
+      <a href="#">Produtos</a>
+      <a href="#">Contato</a>
+      <a href="#">Sobre</a>
+    </nav>
+
+    <form class="search-container" method="GET" action="/buscar">
+      <input type="search" id="searchInput" name="q" placeholder="Buscar" autocomplete="off" />
+      <button type="submit"><img src="./IMG/Lupa.png" alt="Buscar"></button>
+      <ul id="resultsList"></ul>
+    </form>
+  </div>
+
+  <div class="header-icons desktop-only">
+    <a href="#" class="icon-circle"><img src="./IMG/Icon-Carrinho.png" alt="Carrinho"></a>
+    <a href="../Usuario/html/tela_usuario.html" class="icon-circle"><img src="./IMG/Icon-Usuario.png" alt="Usuário"></a>
+  </div>
+
+</header>
+
+<!-- 🔍 Barra de Busca Mobile -->
+<div class="mobile-search mobile-only">
+  <form method="GET" action="/buscar" class="search-container">
+    <input type="search" id="mobileSearchInput" name="q" placeholder="Buscar no site" autocomplete="off" />
+    <button type="submit">
+      <img src="./IMG/Lupa.png" alt="Buscar">
+    </button>
+    <ul id="resultsListMobile"></ul>
+  </form>
+</div>
+
+
+  <!-- Sidebar Mobile -->
+  <aside class="sidebar" id="mobileSidebar">
+    <button class="close-btn" id="closeSidebar">✕</button>
+
+    <a href="../Usuario/html/tela_usuario.html">
+      <div class="user-info">
+        <p>Olá <strong>{user-name}</strong></p>
+        <span>Meus dados pessoais</span>
+      </div>
+    </a>
+    <ul class="sidebar-menu">
+      <li>
+        <a href="../Ultimos Pedidos/TCC - Ultimos Pedidos/Ultimos.html" class="links-aside">
+        <img src="./IMG/Caixa.png"/>
+        <div>
+          <strong>Pedidos</strong><br/>
+          <small>Meus pedidos</small>
+        </div>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="links-aside">
+        <img src="./IMG/Coracao.png"/>
+        <div>
+          <strong>Favoritos</strong><br/>
+          <small>Minha lista de favoritos</small>
+        </div>
+        </a>
+      </li>
+      <li>
+        <a href="../Endereco/endereco.html" class="links-aside">
+        <img src="./IMG/Casa.png"/>
+        <div>
+          <strong>Endereço</strong><br/>
+          <small>Meus endereços de entrega</small>
+        </div>
+        </a>
+      </li>
+      <li>
+        <a href="../Seguranca/seguranca.html" class="links-aside">
+        <img src="./IMG/cadeado.png"/>
+        <div>
+          <strong>Segurança</strong><br/>
+          <small>Altere sua senha</small>
+        </div>
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+<!-- HEADER HEADER HEADER HEADER HEADER HEADER -->
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb">
+    <img src="./IMG/Casa.png"> 
+    <a href="#">Início</a> &gt;
+    <a href="#">Perfil</a> &gt;
+    <span>Favoritos</span>
+  </nav>
+
+  <!-- Container principal -->
+
+  
+  <div class="container">
+
+<!-- MENU LATERAL - MENU LATERAL - MENU LATERAL - MENU LATERAL -->
+  <aside class="sidebar-desktop">
+      <a href="../Home/Home.html" class="btn-voltar-home">← Voltar para Home</a>
+
+      <a href="../Usuario/html/tela_usuario.html" class="perfil-usuario">
+        <div class="perfil-usuario">
+          <p><strong>Olá {user-name}</strong></p>
+          <small>Meus dados pessoais</small>
+        </div>
+      </a>
+  <ul class="menu-lateral">
+    <hr>
+    <li>
+      <a class="links-aside" href="../Ultimos Pedidos/TCC - Ultimos Pedidos/Ultimos.html">
+      <span class="icone"><img src="./IMG/Caixa.png" alt="Pedidos"></span>
+      <div>
+        <strong>Pedidos</strong><br/>
+        <small>Meus pedidos</small>
+      </div>
+      </a>
+    </li>
+    <hr>
+    <li  class="ativo">
+      <a class="links-aside" href="#">
+      <span class="icone"><img src="./IMG/Coracao.png" alt="Favoritos"></span>
+      <div>
+        <strong>Favoritos</strong><br />
+        <small>Minha lista de favoritos</small>
+      </div>
+      </a>
+    </li>
+    <hr>
+    <li>
+      <a class="links-aside" href="../Endereco/endereco.html">
+      <span class="icone"><img src="./IMG/Casa.png" alt="Endereço"></span>
+      <div>
+        <strong>Endereço</strong><br />
+        <small>Meus endereços de entrega</small>
+      </div>
+      </a>
+    </li>
+    <hr>
+    <li>
+    <a class="links-aside" href="../Seguranca/seguranca.html">
+    <span class="icone"><img src="./IMG/cadeado.png" alt="Seguranca"></span>
+    <div>
+      <strong>Segurança</strong><br />
+      <small>Altere sua senha</small>
+    </div>
+    </a>
+    </li>
+</ul>
+</aside>
+
+<!-- MENU LATERAL - MENU LATERAL - MENU LATERAL - MENU LATERAL -->
+
+    <div class="orders-box">
+      <h1>Favoritos</h1>
+
+      <div class="orders-header">
+        <span>Produto</span>
+        <span>Valor</span>
+        <span>Favorito</span>
+      </div>
+
+      <div class="order-card">
+        <img src="IMG/Roupa.PNG" alt="Produto">
+        <div class="order-info">
+          <p class="sku">SKU: 001</p>
+          <p>Malha Gola Careca Lisa</p>
+          <p class="color">VERMELHO ESCURO</p>
+          <p class="size">Tamanho: G</p>
+
+        </div>
+        <div class="order-price">
+          <p>R$ 399,92</p>
+        </div>
+        <div class="order-fav">
+          <img src="./IMG/Coracao.png">
+        </div>
+      </div>
+
+      <div class="order-card">
+        <img src="IMG/Roupa.PNG" alt="Produto">
+        <div class="order-info">
+          <p class="sku">SKU: 001</p>
+          <p>Malha Gola Careca Lisa</p>
+          <p class="color">VERMELHO ESCURO</p>
+          <p class="size">Tamanho: G</p>
+        </div>
+        <div class="order-price">
+          <p>R$ 399,92</p>
+        </div>
+        <div class="order-fav">
+          <img src="./IMG/Coracao.png">
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  <!-- FOOTER -->
+ 
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Institucional</h3>
+        <ul>
+          <li><a href="../Home/Home.html">Sobre a {Nome da Loja}</a></li>
+          <li><a href="#">Produtos</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Conta</h3>
+        <ul>
+          <li><a href="../Usuario/html/tela_usuario.html">Minha Conta</a></li>
+          <li><a href="../Ultimos Pedidos/TCC - Ultimos Pedidos/Ultimos.html">Meus pedidos</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Políticas</h3>
+        <ul>
+          <li><a href="../FAQ/index.html">Política de privacidade</a></li>
+          <li><a href="../FAQ/index.html">Trocas e devoluções</a></li>
+          <li><a href="../FAQ/index.html">Formas de pagamento</a></li>
+          <li><a href="../FAQ/index.html">Formas de entrega</a></li>
+          <li><a href="../FAQ/index.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-column-1">
+        <h3>SAC</h3>
+        <ul>
+          <li><i class="fas fa-envelope"></i> sac@{nomedaloja}.com.br</li>
+          <li><i class="fas fa-phone"></i> (92) 99176-2344</li>
+        </ul>
+        <div class="horario">
+          <h3>Horário de atendimento</h3>
+          <span><strong>Seg-Qui</strong> - 09:30h às 13h | 14h às 18:30h</span><br>
+          <span><strong>Sexta</strong> - 09:30h às 13h | 14h às 18h</span>
+        </div>
+      </div>
+      <div class="footer-column social">
+        <h3>Redes sociais</h3>
+        <div class="social-icons">
+        <ul>
+          <a href="https://www.instagram.com/for.coding_/"><i class="fab fa-instagram"></i></a>
+        </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-icons">
+        <img src="https://img.icons8.com/color/48/visa.png" alt="Visa">
+        <img src="https://img.icons8.com/color/48/mastercard.png" alt="Mastercard">
+        <img src="https://img.icons8.com/color/48/amex.png" alt="Amex">
+        <img src="https://img.icons8.com/color/48/diners-club.png" alt="Diners Club">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Elo_logo.png" alt="Elo">
+      </div>
+    </div>
+    <div class="footer-mobile">
+    <details>
+      <summary>Institucional</summary>
+      <ul>
+        <li><a href="../Home/Home.html">Sobre a {Nome da loja}</a></li>
+        <li><a href="#">Produtos</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Conta</summary>
+      <ul>
+        <li><a href="../Usuario/html/tela_usuario.html">Minha Conta</a></li>
+        <li><a href="../Ultimos Pedidos/TCC - Ultimos Pedidos/Ultimos.html">Meus pedidos</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Políticas</summary>
+      <ul>
+        <li><a href="../FAQ/index.html">Política de privacidade</a></li>
+        <li><a href="../FAQ/index.html">Trocas e devoluções</a></li>
+        <li><a href="../FAQ/index.html">Formas de pagamento</a></li>
+        <li><a href="../FAQ/index.html">Formas de entrega</a></li>
+        <li><a href="../FAQ/index.html">FAQ</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>SAC</summary>
+      <ul>
+        <li>Email: sac@nomedaloja.com.br</li><br>
+        <li>Tel: (92) 99176-2344</li><br>
+        <h3>Horário de atendimento</h3>
+        <li><strong>Seg-Qui</strong>: <br> 09:30h às 13h | 14h às 18:30h</li><br>
+        <li><strong>Sexta</strong>: <br> 09:30h às 13h | 14h às 18h</li>
+      </ul>
+    </details>
+    <details>
+    <summary>Redes sociais</summary>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/for.coding_/"><i class="fab fa-instagram"></i><span>Instagram</span></a>
+    </div>
+</details>
+<details>
+      <summary>Meios de pagamento</summary>
+      <div class="payment-icons">
+        <img src="https://img.icons8.com/color/48/visa.png" alt="Visa" />
+        <img src="https://img.icons8.com/color/48/mastercard.png" alt="MasterCard" />
+        <img src="https://img.icons8.com/color/48/amex.png" alt="Amex" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Elo_logo.png" alt="Elo" />
+      </div>
+    </details>
+  </div>
+  </footer>
+
+  <!-- Script -->
+
+  
+  <script src="./JS/script.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minha Loja</title>
+  <link rel="stylesheet" href="Detalhes.css" />
+  <link rel="shortcut icon" href="./IMG/Logotipo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+
+  <header class="main-header">
+  <button class="hamburger" id="hamburgerBtn">☰</button>
+
+  <div class="logo">
+    <img src="./IMG/Logotipo.png" alt="Logo" />
+  </div>
+
+  <div class="mobile-icons">
+  <a href="../../Carrinho/TCC- Carrinho/Carrinho.html" class="icon-circle"><img src="./IMG/Icon-Carrinho.png" alt="Carrinho"></a>
+  </div>
+
+  <div class="center-content desktop-only">
+    <nav class="nav-menu">
+      <a href="../../Home/Home.html">Home</a>
+      <a href="../../Home/Home.html">Produtos</a>
+      <a href="../../Home/Home.html">Contato</a>
+      <a href="../../Home/Home.html">Sobre</a>
+    </nav>
+
+    <form class="search-container" method="GET" action="/buscar">
+      <input type="search" id="searchInput" name="q" placeholder="Buscar" autocomplete="off" />
+      <button type="submit"><img src="./IMG/Lupa.png" alt="Buscar"></button>
+      <ul id="resultsList"></ul>
+    </form>
+  </div>
+
+  <div class="header-icons desktop-only">
+    <a href="../../Carrinho/TCC- Carrinho/Carrinho.html" class="icon-circle"><img src="./IMG/Icon-Carrinho.png" alt="Carrinho"></a>
+    <a href="../../Usuario/html/tela_usuario.html" class="icon-circle"><img src="./IMG/Icon-Usuario.png" alt="Usuário"></a>
+  </div>
+
+</header>
+
+<!-- 🔍 Barra de Busca Mobile -->
+<div class="mobile-search mobile-only">
+  <form method="GET" action="/buscar" class="search-container">
+    <input type="search" id="mobileSearchInput" name="q" placeholder="Buscar no site" autocomplete="off" />
+    <button type="submit">
+      <img src="./IMG/Lupa.png" alt="Buscar">
+    </button>
+    <ul id="resultsListMobile"></ul>
+  </form>
+</div>
+
+
+  <!-- Sidebar Mobile -->
+  <aside class="sidebar" id="mobileSidebar">
+    <button class="close-btn" id="closeSidebar">✕</button>
+
+    <a href="../../Usuario/html/tela_usuario.html">
+      <div class="user-info">
+        <p>Olá <strong>{user-name}</strong></p>
+        <span>Meus dados pessoais</span>
+      </div>
+    </a>
+    <ul class="sidebar-menu">
+      <li>
+        <a href="../../Ultimos Pedidos/TCC - Ultimos Pedidos/Ultimos.html" class="links-aside">
+        <img src="./IMG/Caixa.png"/>
+        <div>
+          <strong>Pedidos</strong><br/>
+          <small>Meus pedidos</small>
+        </div>
+        </a>
+      </li>
+      <li>
+        <a href="../../Favoritos/Favoritos.html" class="links-aside">
+        <img src="./IMG/Coracao.png"/>
+        <div>
+          <strong>Favoritos</strong><br/>
+          <small>Minha lista de favoritos</small>
+        </div>
+        </a>
+      </li>
+      <li>
+        <a href="../../Endereco/endereco.html" class="links-aside">
+        <img src="./IMG/Casa.png"/>
+        <div>
+          <strong>Endereço</strong><br/>
+          <small>Meus endereços de entrega</small>
+        </div>
+        </a>
+      </li>
+      <li>
+        <a href="../../Seguranca/seguranca.html" class="links-aside">
+        <img src="./IMG/cadeado.png"/>
+        <div>
+          <strong>Segurança</strong><br/>
+          <small>Altere sua senha</small>
+        </div>
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+<!-- HEADER HEADER HEADER HEADER HEADER HEADER -->
+
+  <!-- MAIN MENU -->
+  <nav class="main-menu">
+    <a href="#">Feminina</a>
+    <a href="#">Masculina</a>
+    <a href="#">Crianças</a>
+    <a href="#">Outras</a>
+  </nav>
+  <!-- Detalhe produto -->
+  <div class="product-detail">
+    <div class="image-gallery">
+      <div class="thumbnails">
+        <img src="IMG/Roupa.png" class="thumb" alt="Miniatura 1" onmouseover="changeImage('IMG/Roupa.png')">
+        <img src="IMG/Roupa.png" class="thumb" alt="Miniatura 2" onmouseover="changeImage('IMG/Roupa.png')">
+        <img src="IMG/Roupa.png" class="thumb" alt="Miniatura 3" onmouseover="changeImage('IMG/Roupa.png')">
+        <img src="IMG/Roupa.png" class="thumb" alt="Miniatura 4" onmouseover="changeImage('IMG/Roupa.png')">
+      </div>
+      <div class="main-image">
+        <img id="mainProductImage" src="IMG/Roupa.png" alt="Imagem principal do produto">
+      </div>
+    </div>
+
+
+    <div class="product-info">
+      <h2>Malha Gola Careca Lisa</h2>
+      <p class="ava"><img src="IMG/estrela.png" alt="Avaliação"> 3.7</p>
+      <h3 class="price">R$ 399,92</h3>
+      <div class="payment-methods">
+        <img src="IMG/cartao.png" alt="Cartões de pagamento">
+        <p><strong>MEIOS DE PAGAMENTO:</strong></p>
+      </div>
+
+      <p><strong>SELECIONE A COR:</strong></p>
+      <div class="color-options">
+        <div class="color-circle" style="background-color: #00263A;"></div>
+        <div class="color-circle" style="background-color: #0F5132;"></div>
+      </div>
+
+      <p><strong>SELECIONE O TAMANHO:</strong></p>
+      <div class="size-options">
+        <button>P</button><button>M</button><button>G</button><button>GG</button><button>XGG</button>
+      </div>
+
+      <button class="buy-button"><a href="../../Carrinho/TCC- Carrinho/Carrinho.html">Adicionar ao Carrinho</a></button>
+      <div class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <span>Descrição do produto</span>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="accordion-content">
+            <p>Essa malha gola careca é ideal para dias mais frios. Confortável e versátil.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <span>Informações técnicas</span>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="accordion-content">
+            <p>Composição: 100% algodão</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- INFO BAR -->
+  <div class="info-bar">
+    <div class="info-item">
+      <div class="icon">🚚</div>
+      <div class="text">Frete grátis nas compras acima de R$ 599,00</div>
+    </div>
+    <div class="info-item">
+      <div class="icon">💳</div>
+      <div class="text">Parcelamento em até 10x sem juros no cartão</div>
+    </div>
+    <div class="info-item">
+      <div class="icon">%</div>
+      <div class="text">Desconto de 3% no PIX</div>
+    </div>
+    <div class="info-item">
+      <div class="icon">📍</div>
+      <div class="text">Ajuste grátis todas as Camisas e Alfaiataria nas lojas físicas</div>
+    </div>
+  </div>
+  <!-- Produtos -->
+  <section class="products-section">
+    <h2>Produtos em destaque</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <a href="#">
+          <img src="IMG/Roupa.png" alt="Produto" />
+          <div class="badge">Malha Gola Careca Listrada</div>
+          <div class="price">R$ 399,92</div>
+        </a>
+      </div>
+
+      <div class="product-card">
+        <a href="#">
+          <img src="IMG/Roupa.png" alt="Produto" />
+          <div class="badge">Malha Gola Careca Listrada</div>
+          <div class="price">R$ 399,92</div>
+        </a>
+      </div>
+
+      <div class="product-card">
+        <a href="#">
+          <img src="IMG/Roupa.png" alt="Produto" />
+          <div class="badge">Malha Gola Careca Listrada</div>
+          <div class="price">R$ 399,92</div>
+        </a>
+      </div>
+  </section>
+  <!-- Avaliação -->
+  <div class="review-section">
+    <h3>Avaliações</h3>
+
+    <div class="review-form">
+      <label>Avaliar
+        <span class="stars">
+          ★ ★ ★ ★ ★
+        </span>
+      </label>
+      <textarea placeholder="Escreva o que achou do produto" disabled></textarea>
+      <button disabled>Enviar</button>
+    </div>
+
+    <div class="review">
+      <h4>Hugo</h4>
+      <div class="review-stars">★ ★ ★ ★ ★</div>
+      <p>Bom dms slk</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Institucional</h3>
+        <ul>
+          <li><a href="../../Home/Home.html">Sobre a {Nome da Loja}</a></li>
+          <li><a href="#">Produtos</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Conta</h3>
+        <ul>
+          <li><a href="../../Usuario/html/tela_usuario.html">Minha Conta</a></li>
+          <li><a href="../../Ultimos Pedidos/TCC - Ultimos Pedidos/Ultimos.html">Meus pedidos</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Políticas</h3>
+        <ul>
+          <li><a href="../../FAQ/index.html">Política de privacidade</a></li>
+          <li><a href="../../FAQ/index.html">Trocas e devoluções</a></li>
+          <li><a href="../../FAQ/index.html">Formas de pagamento</a></li>
+          <li><a href="../../FAQ/index.html">Formas de entrega</a></li>
+          <li><a href="../../FAQ/index.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-column-1">
+        <h3>SAC</h3>
+        <ul>
+          <li><i class="fas fa-envelope"></i> sac@{nomedaloja}.com.br</li>
+          <li><i class="fas fa-phone"></i> (92) 99176-2344</li>
+        </ul>
+        <div class="horario">
+          <h3>Horário de atendimento</h3>
+          <span><strong>Seg-Qui</strong> - 09:30h às 13h | 14h às 18:30h</span><br>
+          <span><strong>Sexta</strong> - 09:30h às 13h | 14h às 18h</span>
+        </div>
+      </div>
+      <div class="footer-column social">
+        <h3>Redes sociais</h3>
+        <div class="social-icons">
+        <ul>
+          <a href="https://www.instagram.com/for.coding_/"><i class="fab fa-instagram"></i></a>
+        </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-icons">
+        <img src="https://img.icons8.com/color/48/visa.png" alt="Visa">
+        <img src="https://img.icons8.com/color/48/mastercard.png" alt="Mastercard">
+        <img src="https://img.icons8.com/color/48/amex.png" alt="Amex">
+        <img src="https://img.icons8.com/color/48/diners-club.png" alt="Diners Club">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Elo_logo.png" alt="Elo">
+      </div>
+    </div>
+    <div class="footer-mobile">
+    <details>
+      <summary>Institucional</summary>
+      <ul>
+        <li><a href="../../Home/Home.html">Sobre a {Nome da loja}</a></li>
+        <li><a href="#">Produtos</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Conta</summary>
+      <ul>
+        <li><a href="../../Usuario/html/tela_usuario.html">Minha Conta</a></li>
+        <li><a href="../../Ultimos Pedidos/TCC - Ultimos Pedidos/Ultimos.html">Meus pedidos</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Políticas</summary>
+      <ul>
+        <li><a href="../../FAQ/index.html">Política de privacidade</a></li>
+        <li><a href="../../FAQ/index.html">Trocas e devoluções</a></li>
+        <li><a href="../../FAQ/index.html">Formas de pagamento</a></li>
+        <li><a href="../../FAQ/index.html">Formas de entrega</a></li>
+        <li><a href="../../FAQ/index.html">FAQ</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>SAC</summary>
+      <ul>
+        <li>Email: sac@nomedaloja.com.br</li><br>
+        <li>Tel: (92) 99176-2344</li><br>
+        <h3>Horário de atendimento</h3>
+        <li><strong>Seg-Qui</strong>: 09:30h às 13h | 14h às 18:30h</li><br>
+        <li><strong>Sexta</strong>: 09:30h às 13h | 14h às 18h</li>
+      </ul>
+    </details>
+    <details>
+    <summary>Redes sociais</summary>
+    <div class="social-icons">
+      
+      <a href="https://www.instagram.com/for.coding_/"><i class="fab fa-instagram"></i><span>Instagram</span></a>
+      
+    </div>
+</details>
+<details>
+      <summary>Meios de pagamento</summary>
+      <div class="payment-icons">
+        <img src="https://img.icons8.com/color/48/visa.png" alt="Visa">
+        <img src="https://img.icons8.com/color/48/mastercard.png" alt="Mastercard">
+        <img src="https://img.icons8.com/color/48/amex.png" alt="Amex">
+        <img src="https://img.icons8.com/color/48/diners-club.png" alt="Diners Club">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Elo_logo.png" alt="Elo">
+      </div>
+    </details>
+  </div>
+  </footer>
+
+  <!-- Script -->
+<script src="./JS/script.js" defer></script>
+</body>
+</html>

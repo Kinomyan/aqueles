@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ</title>
+  <link rel="shortcut icon" href="./IMG/Logotipo.png" type="image/x-icon">
+  <link rel="stylesheet" href="./CSS/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+<!-- HEADER HEADER HEADER HEADER HEADER HEADER -->
+
+<header class="main-header">
+  <button class="hamburger" id="hamburgerBtn">☰</button>
+
+  <div class="logo">
+    <img src="./IMG/Logotipo.png" alt="Logo" />
+  </div>
+
+  <div class="mobile-icons">
+  <a href="#" class="icon-circle"><img src="./IMG/Icon-Carrinho.png" alt="Carrinho"></a>
+  </div>
+
+  <div class="center-content desktop-only">
+    <nav class="nav-menu">
+      <a href="#">Home</a>
+      <a href="#">Produtos</a>
+      <a href="#">Contato</a>
+      <a href="#">Sobre</a>
+    </nav>
+
+    <form class="search-container" method="GET" action="/buscar">
+      <input type="search" id="searchInput" name="q" placeholder="Buscar" autocomplete="off" />
+      <button type="submit"><img src="./IMG/Lupa.png" alt="Buscar"></button>
+      <ul id="resultsList"></ul>
+    </form>
+  </div>
+
+  <div class="header-icons desktop-only">
+    <a href="#" class="icon-circle"><img src="./IMG/Icon-Carrinho.png" alt="Carrinho"></a>
+    <a href="../Usuario/html/tela_usuario.html" class="icon-circle"><img src="./IMG/Icon-Usuario.png" alt="Usuário"></a>
+  </div>
+
+</header>
+
+<!-- 🔍 Barra de Busca Mobile -->
+<div class="mobile-search mobile-only">
+  <form method="GET" action="/buscar" class="search-container">
+    <input type="search" id="mobileSearchInput" name="q" placeholder="Buscar no site" autocomplete="off" />
+    <button type="submit">
+      <img src="./IMG/Lupa.png" alt="Buscar">
+    </button>
+    <ul id="resultsListMobile"></ul>
+  </form>
+</div>
+
+
+  <!-- Sidebar Mobile -->
+  <aside class="sidebar" id="mobileSidebar">
+    <button class="close-btn" id="closeSidebar">✕</button>
+    <a href="../Usuario/html/tela_usuario.html">
+    <div class="user-info">      
+      <p>Olá <strong>{user-name}</strong></p>
+      <span>Meus dados pessoais</span>
+    </div>
+    </a>
+    <ul class="sidebar-menu">
+      <li>
+        <a href="#" class="links-aside">
+        <img src="./IMG/Caixa.png"/>
+        <div>
+          <strong>Pedidos</strong><br/>
+          <small>Meus pedidos</small>
+        </div>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="links-aside">
+        <img src="./IMG/Coracao.png"/>
+        <div>
+          <strong>Favoritos</strong><br/>
+          <small>Minha lista de favoritos</small>
+        </div>
+        </a>
+      </li>
+      <li>
+        <a href="../Endereco/endereco.html" class="links-aside">
+        <img src="./IMG/Casa.png"/>
+        <div>
+          <strong>Endereço</strong><br/>
+          <small>Meus endereços de entrega</small>
+        </div>
+        </a>
+      </li>
+      <li>
+        <a class="links-aside" href="../Seguranca/seguranca.html">
+        <img src="./IMG/cadeado.png"/>
+        <div>
+          <strong>Segurança</strong><br/>
+          <small>Altere sua senha</small>
+        </div>
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- HEADER HEADER HEADER HEADER HEADER HEADER -->
+
+  <!-- MAIN MAIN MAIN MAIN -->
+
+<main class="info-wrapper">
+  <aside class="info-menu">
+    <button class="tab-btn active" data-tab="privacidade">Política de Privacidade</button>
+    <button class="tab-btn" data-tab="trocas">Trocas e Devolução</button>
+    <button class="tab-btn" data-tab="pagamento">Formas de Pagamento</button>
+    <button class="tab-btn" data-tab="entrega">Formas de Entrega</button>
+  </aside>
+
+  <section class="info-content">
+    <div id="privacidade" class="tab-content active">
+      <h2>Política de Privacidade</h2>
+      <p>A sua privacidade é muito importante para nós. Por isso, nos comprometemos com a segurança e a confidencialidade dos dados fornecidos em nosso site.</p>
+    </div>
+
+    <div id="trocas" class="tab-content">
+      <h2>Trocas e Devolução</h2>
+      <p>Você pode solicitar troca em até 7 dias corridos após o recebimento. O produto deve estar em perfeitas condições e com etiquetas.</p>
+    </div>
+
+    <div id="pagamento" class="tab-content">
+      <h2>Formas de Pagamento</h2>
+      <p>Aceitamos cartões de crédito (Visa, Mastercard, Elo), PIX e boleto bancário.</p>
+    </div>
+
+    <div id="entrega" class="tab-content">
+      <h2>Formas de Entrega</h2>
+      <p>Trabalhamos com Correios e transportadoras parceiras. Prazo e valor são calculados na finalização da compra.</p>
+    </div>
+  </section>
+</main>
+
+<!-- MAIN MAIN MAIN MAIN -->
+
+<!-- FOOTER FOOTER FOOTER -->
+
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Institucional</h3>
+        <ul>
+          <li><a href="#">Sobre a {Nome da Loja}</a></li>
+          <li><a href="#">Produtos</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Conta</h3>
+        <ul>
+          <li><a href="../Usuario/html/tela_usuario.html">Minha Conta</a></li>
+          <li><a href="#">Meus pedidos</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Políticas</h3>
+        <ul>
+          <li><a href="#">Política de privacidade</a></li>
+          <li><a href="#">Trocas e devoluções</a></li>
+          <li><a href="#">Formas de pagamento</a></li>
+          <li><a href="#">Formas de entrega</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-column-1">
+        <h3>SAC</h3>
+        <ul>
+          <li><i class="fas fa-envelope"></i> sac@{nomedaloja}.com.br</li>
+          <li><i class="fas fa-phone"></i> (92) 99176-2344</li>
+        </ul>
+        <div class="horario">
+          <h3>Horário de atendimento</h3>
+          <span><strong>Seg-Qui</strong> - 09:30h às 13h | 14h às 18:30h</span><br>
+          <span><strong>Sexta</strong> - 09:30h às 13h | 14h às 18h</span>
+        </div>
+      </div>
+      <div class="footer-column social">
+        <h3>Redes sociais</h3>
+        <div class="social-icons">
+        <ul>
+          <a href="https://www.instagram.com/for.coding_/"><i class="fab fa-instagram"></i></a>
+        </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-icons">
+        <img src="https://img.icons8.com/color/48/visa.png" alt="Visa">
+        <img src="https://img.icons8.com/color/48/mastercard.png" alt="Mastercard">
+        <img src="https://img.icons8.com/color/48/amex.png" alt="Amex">
+        <img src="https://img.icons8.com/color/48/diners-club.png" alt="Diners Club">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Elo_logo.png" alt="Elo">
+      </div>
+    </div>
+    <div class="footer-mobile">
+    <details>
+      <summary>Institucional</summary>
+      <ul>
+        <li><a href="#">Sobre a {Nome da loja}</a></li>
+        <li><a href="#">Produtos</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Conta</summary>
+      <ul>
+        <li><a href="../Usuario/html/tela_usuario.html">Minha Conta</a></li>
+        <li><a href="#">Meus pedidos</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Políticas</summary>
+      <ul>
+        <li><a href="#">Política de privacidade</a></li>
+        <li><a href="#">Trocas e devoluções</a></li>
+        <li><a href="#">Formas de pagamento</a></li>
+        <li><a href="#">Formas de entrega</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>SAC</summary>
+      <ul>
+        <li>Email: sac@nomedaloja.com.br</li><br>
+        <li>Tel: (92) 99176-2344</li><br>
+        <h3>Horário de atendimento</h3>
+        <li><strong>Seg-Qui</strong>: 09:30h às 13h | 14h às 18:30h</li><br>
+        <li><strong>Sexta</strong>: 09:30h às 13h | 14h às 18h</li>
+      </ul>
+    </details>
+    <details>
+    <summary>Redes sociais</summary>
+    <div class="social-icons">
+      
+      <a href="https://www.instagram.com/for.coding_/"><i class="fab fa-instagram"></i><span>Instagram</span></a>
+      
+    </div>
+</details>
+<details>
+      <summary>Meios de pagamento</summary>
+      <div class="payment-icons">
+        <img src="https://img.icons8.com/color/48/visa.png" alt="Visa">
+        <img src="https://img.icons8.com/color/48/mastercard.png" alt="Mastercard">
+        <img src="https://img.icons8.com/color/48/amex.png" alt="Amex">
+        <img src="https://img.icons8.com/color/48/diners-club.png" alt="Diners Club">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Elo_logo.png" alt="Elo">
+      </div>
+    </details>
+  </div>
+  </footer>
+
+<!-- FOOTER FOOTER FOOTER -->
+
+  <script src="./JS/script.js" defer></script>
+</body>
+</html>
