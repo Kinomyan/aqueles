@@ -21,6 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Exibe feedback e redireciona
     alert('Login realizado com sucesso!');
-    window.location.href = '../Home/Home.html';
+    window.location.href = 'Home/Home.html';
   });
 });
