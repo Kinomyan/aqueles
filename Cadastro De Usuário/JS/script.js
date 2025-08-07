@@ -45,6 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     alert('Cadastro realizado com sucesso!');
-    window.location.href = '../Login/login.html';
+    window.location.href = '../index.html';
   });
 });
